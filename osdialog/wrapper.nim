@@ -23,7 +23,7 @@ elif defined(linux):
 
 {.passC: CFLAGS, compile: "src/osdialog.c".}
 
-#[
+
 type
   MessageBoxLevel* = enum
     mblInfo, mblWarning, mblError
@@ -36,7 +36,6 @@ proc osdialog_message*(level: MessageBoxLevel, buttons: MessageBoxButtons,
 
 proc osdialog_prompt*(level: MessageBoxLevel, message: cstring,
                    text: cstring): cstring {.cdecl, importc.}
-]#
 
 type
   FileDialog* = enum
